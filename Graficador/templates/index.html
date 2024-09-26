@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ecuación Cuadrática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Ecuación Cuadrática</h1>
+        <form action="/" method="POST">
+            <div class="input-group">
+                <label for="a">Coeficiente de x² (a):</label>
+                <input type="text" name="a" id="a" required>
+            </div>
+            <div class="input-group">
+                <label for="b">Coeficiente de x (b):</label>
+                <input type="text" name="b" id="b" required>
+            </div>
+            <div class="input-group">
+                <label for="c">Término constante (c):</label>
+                <input type="text" name="c" id="c" required>
+            </div>
+            <button type="submit">Calcular y Graficar</button>
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        {% if resultado %}
+        <div class="resultado">
+            <h2>Resultado:</h2>
+            <p>{{ resultado }}</p>
+        </div>
+
+        <div class="grafico">
+            <h2>Gráfico:</h2>
+            <img src="data:image/png;base64,{{ grafico }}" alt="Gráfico de la ecuación cuadrática">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
