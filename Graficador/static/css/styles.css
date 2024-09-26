@@ -67,3 +67,30 @@ button:hover {
     text-align: center;
     margin-top: 20px;
 }
+.footer {
+    background-color: #f8f8f8; /* Color de fondo */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    position: fixed; /* Fija el footer en la parte inferior */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-logo {
+    max-width: 120px; /* Tamaño máximo del logo */
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
