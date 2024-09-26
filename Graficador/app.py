@@ -36,7 +36,7 @@ def generar_grafico(a, b, c):
     ax.axvline(0, color='black', linewidth=0.5)
     ax.legend()
 
-    # Convertir la gráfica a imagen en formato base64
+    # Convertir la gráfica a imagen 
     img = io.BytesIO()
     fig.savefig(img, format='png')
     img.seek(0)
